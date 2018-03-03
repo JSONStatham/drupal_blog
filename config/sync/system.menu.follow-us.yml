@@ -1,0 +1,8 @@
+uuid: 81be0ed9-a4a2-47c9-8481-8eaff463b5f1
+langcode: en
+status: true
+dependencies: {  }
+id: follow-us
+label: 'Follow us'
+description: ''
+locked: false
