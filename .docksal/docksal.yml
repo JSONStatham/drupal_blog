@@ -1,0 +1,22 @@
+version: "2.1"
+
+services:
+  adminer:
+    hostname: adminer
+    image: adminer
+    labels:
+      - io.docksal.virtual-host=db.${VIRTUAL_HOST}
+  mail:
+    hostname: mail
+    image: mailhog/mailhog
+    expose:
+      - "80"
+    environment:
+      - MH_API_BIND_ADDR=0.0.0.0:80
+      - MH_UI_BIND_ADDR=0.0.0.0:80
+    labels:
+      - io.docksal.virtual-host=mail.${VIRTUAL_HOST}
+    user: root
+  cli:
+    environment:
+      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}
