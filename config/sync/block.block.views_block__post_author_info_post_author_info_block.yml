@@ -1,0 +1,25 @@
+uuid: be0b4540-f98d-401a-b1c5-d18428b085dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.post_author_info
+  module:
+    - views
+  theme:
+    - blog_theme
+id: views_block__post_author_info_post_author_info_block
+theme: blog_theme
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'views_block:post_author_info-post_author_info_block'
+settings:
+  id: 'views_block:post_author_info-post_author_info_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

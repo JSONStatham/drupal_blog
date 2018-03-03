@@ -11,7 +11,7 @@ dependencies:
 id: followus
 theme: blog_theme
 region: sidebar_second
-weight: -6
+weight: -9
 provider: null
 plugin: 'system_menu_block:follow-us'
 settings:

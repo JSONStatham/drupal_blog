@@ -1,0 +1,17 @@
+id: related_posts
+label: 'Related posts'
+ui_limit: 'article|*'
+properties:
+  block: 'views_block:related_posts-related_posts_block'
+  use_block_title: true
+  config:
+    id: 'views_block:related_posts-related_posts_block'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: none
+type: block
+type_label: 'Block field'
+entities:
+  node: node

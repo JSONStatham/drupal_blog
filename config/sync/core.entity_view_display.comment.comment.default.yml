@@ -26,25 +26,25 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
+        - comment_title
         - comment_author
         - comment_post_date
-        - comment_title
         - comment_body
         - links
     fields:
       comment_post_date:
         plugin_id: comment_post_date
-        weight: 1
+        weight: 2
         label: hidden
         formatter: ds_post_date_custom_long_date
       comment_title:
         plugin_id: comment_title
-        weight: 2
+        weight: 0
         label: hidden
         formatter: default
       comment_author:
         plugin_id: comment_author
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
 _core:

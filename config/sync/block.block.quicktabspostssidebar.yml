@@ -9,7 +9,7 @@ dependencies:
 id: quicktabspostssidebar
 theme: blog_theme
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: 'quicktabs_block:posts_sidebar'
 settings:

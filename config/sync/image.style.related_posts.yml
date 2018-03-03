@@ -1,0 +1,14 @@
+uuid: bf17c4fd-96ff-4668-89b0-d160c9ebf7e7
+langcode: en
+status: true
+dependencies: {  }
+name: related_posts
+label: 'Related posts (350x275)'
+effects:
+  7952169a-bbdb-413a-b70e-1d3ab6787509:
+    uuid: 7952169a-bbdb-413a-b70e-1d3ab6787509
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 275

@@ -11,7 +11,7 @@ dependencies:
 id: facebook
 theme: blog_theme
 region: sidebar_second
-weight: -5
+weight: -8
 provider: null
 plugin: 'block_content:dc2e2967-007f-4125-97af-d1a9f3d42b0d'
 settings:

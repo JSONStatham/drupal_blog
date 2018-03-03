@@ -35,11 +35,17 @@ third_party_settings:
         - field_category
         - field_image
         - body
+        - 'dynamic_block_field:node-related_posts'
         - 'dynamic_token_field:node-post_categories'
-        - group_share_wrapper
         - addtoany
+        - group_share_wrapper
         - comment
     fields:
+      'dynamic_block_field:node-related_posts':
+        plugin_id: 'dynamic_block_field:node-related_posts'
+        weight: 5
+        label: above
+        formatter: default
       node_post_date:
         plugin_id: node_post_date
         weight: 1
@@ -52,7 +58,7 @@ third_party_settings:
         formatter: default
       'dynamic_token_field:node-post_categories':
         plugin_id: 'dynamic_token_field:node-post_categories'
-        weight: 5
+        weight: 6
         label: hidden
         formatter: default
   field_group:
@@ -60,7 +66,7 @@ third_party_settings:
       children:
         - addtoany
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: html_element
       format_settings:
         label: 'Share:'
@@ -94,7 +100,7 @@ content:
     label: hidden
   comment:
     type: comment_default
-    weight: 7
+    weight: 8
     region: content
     label: above
     settings:
