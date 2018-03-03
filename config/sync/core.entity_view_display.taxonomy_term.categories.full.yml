@@ -1,0 +1,33 @@
+uuid: d810f4d2-bbab-4365-aa46-51cb0b6e3815
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - taxonomy.vocabulary.categories
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions: {  }
+id: taxonomy_term.categories.full
+targetEntityType: taxonomy_term
+bundle: categories
+mode: full
+content: {  }
+hidden:
+  description: true

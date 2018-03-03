@@ -1,0 +1,14 @@
+uuid: 8513f1e9-7022-4252-9a63-9f147f7d1be3
+langcode: en
+status: true
+dependencies: {  }
+name: article_images
+label: 'Article images (750x500)'
+effects:
+  5243217d-a142-4d2e-8b68-e7206e75b823:
+    uuid: 5243217d-a142-4d2e-8b68-e7206e75b823
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 500

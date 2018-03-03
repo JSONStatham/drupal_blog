@@ -1,9 +1,10 @@
-uuid: 20dbc519-ba95-443b-997e-a1d5943a01c3
+uuid: 4cfd9e4b-552e-4439-9456-588423a1b3a4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - comment.type.comment
+    - core.entity_view_mode.comment.full
     - field.field.comment.comment.comment_body
   module:
     - ds
@@ -26,44 +27,24 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - comment_author
-        - comment_post_date
-        - comment_title
         - comment_body
         - links
-    fields:
-      comment_post_date:
-        plugin_id: comment_post_date
-        weight: 1
-        label: hidden
-        formatter: ds_post_date_custom_long_date
-      comment_title:
-        plugin_id: comment_title
-        weight: 2
-        label: hidden
-        formatter: default
-      comment_author:
-        plugin_id: comment_author
-        weight: 0
-        label: hidden
-        formatter: default
 _core:
   default_config_hash: 77Ye1kR-P6AaiGfEO8mnXNSr7nqtnP3PiiVBwJeGGMI
-id: comment.comment.default
+id: comment.comment.full
 targetEntityType: comment
 bundle: comment
-mode: default
+mode: full
 content:
   comment_body:
-    type: text_trimmed
-    weight: 3
-    region: ds_content
     label: hidden
-    settings:
-      trim_length: 600
+    type: text_default
+    weight: 0
+    region: ds_content
+    settings: {  }
     third_party_settings: {  }
   links:
-    weight: 4
+    weight: 100
     region: ds_content
     settings: {  }
     third_party_settings: {  }

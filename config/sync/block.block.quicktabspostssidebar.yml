@@ -1,0 +1,20 @@
+uuid: 2c0208c9-5159-4da2-af65-9d6f0a5f2c36
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+  theme:
+    - blog_theme
+id: quicktabspostssidebar
+theme: blog_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'quicktabs_block:posts_sidebar'
+settings:
+  id: 'quicktabs_block:posts_sidebar'
+  label: 'QuickTabs - Posts sidebar'
+  provider: quicktabs
+  label_display: '0'
+visibility: {  }

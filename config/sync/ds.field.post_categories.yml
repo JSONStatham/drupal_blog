@@ -1,0 +1,11 @@
+id: post_categories
+label: 'Post categories'
+ui_limit: 'article|*'
+properties:
+  content:
+    value: '<span class="tags">Tags: </span> [node:field_category]'
+    format: full_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

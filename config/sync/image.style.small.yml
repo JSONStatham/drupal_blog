@@ -1,0 +1,14 @@
+uuid: ad88812c-27b4-4a98-82d7-01965683ed1b
+langcode: en
+status: true
+dependencies: {  }
+name: small
+label: 'Small (72x72)'
+effects:
+  4a14a2fd-a621-46d9-b6a9-8d0506c0ba15:
+    uuid: 4a14a2fd-a621-46d9-b6a9-8d0506c0ba15
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 72
+      height: 72

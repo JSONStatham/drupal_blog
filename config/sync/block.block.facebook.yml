@@ -1,0 +1,25 @@
+uuid: aedd85c5-6456-483c-b9af-2f65f06ba041
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dc2e2967-007f-4125-97af-d1a9f3d42b0d'
+  module:
+    - block_content
+  theme:
+    - blog_theme
+id: facebook
+theme: blog_theme
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'block_content:dc2e2967-007f-4125-97af-d1a9f3d42b0d'
+settings:
+  id: 'block_content:dc2e2967-007f-4125-97af-d1a9f3d42b0d'
+  label: Facebook
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

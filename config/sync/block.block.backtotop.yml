@@ -1,0 +1,25 @@
+uuid: 11440d80-59eb-4d4c-b32e-767175d89f9e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2ca9d269-3134-41f3-a7cc-a197dedef642'
+  module:
+    - block_content
+  theme:
+    - blog_theme
+id: backtotop
+theme: blog_theme
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:2ca9d269-3134-41f3-a7cc-a197dedef642'
+settings:
+  id: 'block_content:2ca9d269-3134-41f3-a7cc-a197dedef642'
+  label: 'Back to top'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

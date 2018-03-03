@@ -11,7 +11,7 @@ _core:
 id: blog_theme_help
 theme: blog_theme
 region: content
-weight: -30
+weight: -6
 provider: null
 plugin: help_block
 settings:

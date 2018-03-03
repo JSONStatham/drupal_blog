@@ -1,0 +1,11 @@
+id: authored_by
+label: 'Authored by'
+ui_limit: 'article|*'
+properties:
+  content:
+    value: "<p><span class=\"authored-by\">by</span> <a href=\"/user/[node:author:uid]\">[node:author]</a></p>\r\n"
+    format: full_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

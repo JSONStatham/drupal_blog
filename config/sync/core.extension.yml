@@ -1,4 +1,5 @@
 module:
+  addtoany: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
@@ -32,10 +33,11 @@ module:
   page_cache: 0
   path: 0
   quickedit: 0
+  quicktabs: 0
   rdf: 0
   search: 0
-  sharethis: 0
   shortcut: 0
+  statistics: 0
   system: 0
   taxonomy: 0
   text: 0

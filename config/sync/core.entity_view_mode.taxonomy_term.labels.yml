@@ -1,0 +1,10 @@
+uuid: f5fee04a-3c33-4c85-bd43-9813e558fe74
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.labels
+label: Labels
+targetEntityType: taxonomy_term
+cache: true

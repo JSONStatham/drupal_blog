@@ -1,9 +1,10 @@
-uuid: 3002c349-b4db-426d-b657-db4c03f35891
+uuid: a8d1dfcb-5fa9-439d-aaee-909eccd1ed7a
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_category
@@ -12,9 +13,11 @@ dependencies:
     - image.style.article_images
     - node.type.article
   module:
+    - comment
     - ds
     - field_group
     - image
+    - taxonomy
     - text
     - user
 third_party_settings:
@@ -27,38 +30,29 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - node_title
         - 'dynamic_token_field:node-authored_by'
         - node_post_date
         - field_category
         - field_image
         - body
-        - addtoany
+        - 'dynamic_token_field:node-post_categories'
         - group_share_wrapper
-        - node_link
+        - addtoany
+        - comment
     fields:
-      node_link:
-        plugin_id: node_link
-        weight: 7
-        label: hidden
-        formatter: default
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
-        settings:
-          link: true
-          wrapper: h2
-          class: ''
       node_post_date:
         plugin_id: node_post_date
-        weight: 2
+        weight: 1
         label: hidden
         formatter: ds_post_date_custom_long_date
       'dynamic_token_field:node-authored_by':
         plugin_id: 'dynamic_token_field:node-authored_by'
-        weight: 1
+        weight: 0
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-post_categories':
+        plugin_id: 'dynamic_token_field:node-post_categories'
+        weight: 5
         label: hidden
         formatter: default
   field_group:
@@ -80,43 +74,56 @@ third_party_settings:
         classes: share-this
       label: 'Share:'
 _core:
-  default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
-id: node.article.teaser
+  default_config_hash: qVtHNxqdXB9w369AO5JB5SVhflquWqFm5xfyvYLAIlM
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: full
 content:
   addtoany:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   body:
-    type: text_summary_or_trimmed
-    weight: 5
+    type: text_default
+    weight: 4
     region: content
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     label: hidden
+  comment:
+    type: comment_default
+    weight: 7
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
   field_category:
-    type: entity_reference_label
-    weight: 3
+    type: entity_reference_rss_category
+    weight: 2
     region: content
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
   field_image:
     type: image
-    weight: 4
+    weight: 3
     region: content
     settings:
       image_style: article_images
-      image_link: content
-    third_party_settings: {  }
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     label: hidden
 hidden:
-  comment: true
   field_tags: true
   links: true

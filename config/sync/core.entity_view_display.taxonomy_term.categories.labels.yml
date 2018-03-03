@@ -1,0 +1,45 @@
+uuid: b0e89d8a-dc7b-40fc-974f-c090cf279a62
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.labels
+    - taxonomy.vocabulary.categories
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - taxonomy_term_title
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: category
+id: taxonomy_term.categories.labels
+targetEntityType: taxonomy_term
+bundle: categories
+mode: labels
+content: {  }
+hidden:
+  description: true

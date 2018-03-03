@@ -1,0 +1,25 @@
+uuid: 86777c37-7aae-4046-864c-15c0764171a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dfb57efb-170b-45b2-baec-45546b2e6865'
+  module:
+    - block_content
+  theme:
+    - blog_theme
+id: footercopyright
+theme: blog_theme
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:dfb57efb-170b-45b2-baec-45546b2e6865'
+settings:
+  id: 'block_content:dfb57efb-170b-45b2-baec-45546b2e6865'
+  label: 'Footer copyright'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

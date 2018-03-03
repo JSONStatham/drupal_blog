@@ -1,0 +1,24 @@
+uuid: 0bbe37ed-8c08-41bc-9dd2-51c96a5a015f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.posts_gallery
+  module:
+    - views
+  theme:
+    - blog_theme
+id: views_block__posts_gallery_posts_gallery_block
+theme: blog_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'views_block:posts_gallery-posts_gallery_block'
+settings:
+  id: 'views_block:posts_gallery-posts_gallery_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
